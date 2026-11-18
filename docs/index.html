@@ -219,7 +219,7 @@ html[dir="rtl"] .story h3{font-family:var(--f-ar);font-weight:700;font-size:32px
   </div>
   <div class="actions">
     <button class="btn primary" id="btn-contact" data-t="contact">Me contacter</button>
-    <button class="btn" id="btn-copy" data-t="copyPhone">Copier le numéro</button>
+    <a class="btn" id="btn-wa" href="https://wa.me/213696205692" target="_blank" rel="noopener">WhatsApp</a>
   </div>
 
   <nav class="hl" aria-label="Highlights" id="hl"></nav>
@@ -244,7 +244,7 @@ html[dir="rtl"] .story h3{font-family:var(--f-ar);font-weight:700;font-size:32px
 <div class="toast" id="toast" hidden></div>
 
 <script>
-const PHONE="0777 00 35 69", EMAIL="fadilabouteldja372005@gmail.com";
+const PHONE="0696 20 56 92", WA="https://wa.me/213696205692", EMAIL="fadilabouteldja372005@gmail.com";
 const T={
 fr:{stat1:"projets",stat2:"langues",stat3:"traduction",role:"Social Media Manager",
  bio1:"Je crée du contenu qui donne envie : tournage, montage, textes et stratégie pour les réseaux sociaux.",
@@ -359,7 +359,7 @@ let si=0,timer;
 function openStory(i){si=i;show("#ov-story");drawStory()}
 function drawStory(){
   clearTimeout(timer);const h=HL[si][L],t=T[L];let body;
-  if(h[2]==="contact")body=`<button class="copy" data-c="${PHONE}">${PHONE}<small>${t.tapCopy}</small></button><button class="copy" data-c="${EMAIL}">${EMAIL}<small>${t.tapCopy}</small></button><p>${t.loc}</p>`;
+  if(h[2]==="contact")body=`<a class="copy" href="${WA}" target="_blank" rel="noopener">WhatsApp<small>${PHONE}</small></a><button class="copy" data-c="${PHONE}">${PHONE}<small>${t.tapCopy}</small></button><button class="copy" data-c="${EMAIL}">${EMAIL}<small>${t.tapCopy}</small></button><p>${t.loc}</p>`;
   else if(typeof h[2]==="string")body=h[2];
   else body="<ul>"+h[2].map(x=>Array.isArray(x)?`<li>${x[0]}<small>${x[1]}</small></li>`:`<li>${x}</li>`).join("")+"</ul>";
   $("#story").innerHTML=`<div class="prog">${HL.map((_,k)=>`<i class="${k<si?"done":k===si?"on":""}"><b></b></i>`).join("")}</div>
@@ -381,7 +381,6 @@ document.querySelectorAll(".lang button").forEach(b=>b.onclick=()=>{L=b.lang;try
 $("#tab-grid").onclick=()=>{mode="grid";$("#tab-grid").setAttribute("aria-selected",true);$("#tab-reels").setAttribute("aria-selected",false);renderGrid()};
 $("#tab-reels").onclick=()=>{mode="reels";$("#tab-reels").setAttribute("aria-selected",true);$("#tab-grid").setAttribute("aria-selected",false);renderGrid()};
 $("#btn-contact").onclick=()=>openStory(HL.length-1);
-$("#btn-copy").onclick=()=>copy(PHONE);
 renderText();
 </script>
 
