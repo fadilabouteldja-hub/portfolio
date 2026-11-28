@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Taha Zinai</title>
+<meta name="description" content="Taha Adnane Zinai — Scénariste · Production · Acteur. Étudiant en cinéma, Faculté des Arts, Université Oran 1.">
+<meta property="og:title" content="Taha Zinai — Scénariste · Production · Acteur">
+<meta property="og:description" content="Portfolio cinéma — Oran, Algérie.">
+<meta property="og:image" content="media/avatar.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="media/avatar.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Courier+Prime:wght@400;700&family=Inter:wght@400;500;600&family=Tajawal:wght@400;500;700&display=swap">
+<style>
+:root{
+  --bg:#0b0a09; --bg-2:#141210; --card:#1a1714; --line:#2c2722;
+  --text:#f2ece4; --muted:#a59a8c; --accent:#d9a441; --accent-2:#8e1f2a;
+  --f-display:"Bebas Neue",Impact,sans-serif;
+  --f-script:"Courier Prime","Courier New",monospace;
+  --f-body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-ar:"Tajawal","Geeza Pro",sans-serif;
+  color-scheme:dark;
+}
+:root[data-theme="light"]{
+  --bg:#f6f1e9; --bg-2:#ede5d9; --card:#fffaf2; --line:#ddd2c2;
+  --text:#1b1713; --muted:#6c6155; --accent:#a8741a; --accent-2:#8e1f2a;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 var(--f-body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+[dir="rtl"] body{font-family:var(--f-ar)}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px}
+/* film grain */
+body::before{content:"";position:fixed;inset:-50%;z-index:100;pointer-events:none;opacity:.06;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation:grain 1.2s steps(6) infinite}
+@keyframes grain{0%{transform:translate(0,0)}25%{transform:translate(-3%,2%)}50%{transform:translate(2%,-3%)}75%{transform:translate(-2%,-1%)}100%{transform:translate(1%,3%)}}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+.logo{font:28px/1 var(--f-display);letter-spacing:.06em;text-decoration:none}
+.logo span{color:var(--accent)}
+.nav nav{display:flex;gap:20px;font-size:14px}
+.nav nav a{text-decoration:none;color:var(--muted)}
+.nav nav a:hover{color:var(--text)}
+.tools{display:flex;gap:6px;align-items:center}
+.tools button{background:none;border:1px solid var(--line);color:var(--text);border-radius:999px;padding:5px 10px;font:600 12px var(--f-body);cursor:pointer}
+.tools button[aria-pressed="true"]{background:var(--accent);color:#111;border-color:var(--accent)}
+@media (max-width:760px){.nav nav{display:none}}
+
+/* hero */
+.hero{position:relative;padding:72px 0 64px;overflow:hidden}
+.hero::before,.hero::after{content:"";position:absolute;left:0;right:0;height:22px;background:#000;z-index:1}
+.hero::before{top:0}.hero::after{bottom:0}
+:root[data-theme="light"] .hero::before,:root[data-theme="light"] .hero::after{background:#1b1713}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.slug{font:700 13px var(--f-script);letter-spacing:.12em;color:var(--accent);text-transform:uppercase;margin:0 0 14px}
+[dir="rtl"] .slug{letter-spacing:0}
+.hero h1{font:clamp(64px,11vw,132px)/.88 var(--f-display);margin:0;letter-spacing:.01em}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.roles{font:500 clamp(15px,2vw,19px) var(--f-body);color:var(--muted);margin:18px 0 8px;letter-spacing:.04em}
+.roles b{color:var(--text);font-weight:600}
+.hook{font:italic 18px var(--f-script);margin:0 0 28px;color:var(--text)}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:999px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid var(--line)}
+.btn.primary{background:var(--accent);color:#111;border-color:var(--accent)}
+.btn:hover{transform:translateY(-1px)}
+.portrait{position:relative;justify-self:center;width:min(360px,100%)}
+.portrait img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:6px;filter:contrast(1.05) saturate(.92)}
+.portrait::after{content:"";position:absolute;inset:0;border-radius:6px;box-shadow:inset 0 -90px 80px -40px rgba(0,0,0,.55)}
+.portrait .tag{position:absolute;left:-14px;bottom:24px;z-index:2;background:var(--accent-2);color:#fff;font:700 12px var(--f-script);padding:8px 12px;letter-spacing:.08em;transform:rotate(-3deg)}
+[dir="rtl"] .portrait .tag{left:auto;right:-14px;transform:rotate(3deg)}
+@media (max-width:820px){.hero{padding:56px 0 52px}.hero .wrap{grid-template-columns:1fr;gap:36px}.portrait{order:-1;width:min(280px,80%)}}
+
+/* sections */
+section{padding:84px 0;border-top:1px solid var(--line)}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:32px}
+.sec-head h2{font:clamp(40px,6vw,64px)/1 var(--f-display);margin:0;letter-spacing:.02em}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.about p{margin:0 0 16px;font-size:17px}
+.about .note{font:15px/1.7 var(--f-script);color:var(--muted);border-left:3px solid var(--accent);padding-left:16px}
+[dir="rtl"] .about .note{border-left:0;border-right:3px solid var(--accent);padding-left:0;padding-right:16px}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-content:start}
+.fact{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px}
+.fact small{display:block;color:var(--muted);font:12px var(--f-script);text-transform:uppercase;letter-spacing:.08em}
+.fact strong{font-weight:600}
+@media (max-width:820px){.about{grid-template-columns:1fr;gap:28px}}
+
+/* filters + grid */
+.filters{display:flex;gap:8px;flex-wrap:wrap}
+.filters button{background:none;border:1px solid var(--line);color:var(--muted);padding:8px 14px;border-radius:999px;cursor:pointer;font:500 14px var(--f-body)}
+[dir="rtl"] .filters button{font-family:var(--f-ar)}
+.filters button[aria-pressed="true"]{color:#111;background:var(--accent);border-color:var(--accent)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;cursor:pointer;text-align:start;padding:0;color:inherit;font:inherit;display:flex;flex-direction:column;transition:transform .25s,border-color .25s}
+.card:hover,.card:focus-visible{transform:translateY(-4px);border-color:var(--accent);outline:none}
+.thumb{position:relative;aspect-ratio:9/14;overflow:hidden;background:#000}
+.thumb img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.card:hover .thumb img{transform:scale(1.04)}
+.thumb .slate{position:absolute;top:10px;left:10px;background:#000c;color:#fff;font:700 11px var(--f-script);padding:4px 8px;letter-spacing:.08em}
+[dir="rtl"] .thumb .slate{left:auto;right:10px}
+.thumb .play{position:absolute;inset:auto 12px 12px auto;width:48px;height:48px;border-radius:50%;background:var(--accent);display:grid;place-items:center;box-shadow:0 6px 20px #0008}
+[dir="rtl"] .thumb .play{inset:auto auto 12px 12px}
+.thumb .play::before{content:"";border-left:14px solid #111;border-top:9px solid transparent;border-bottom:9px solid transparent;margin-left:4px}
+.card-body{padding:14px 16px 18px}
+.card-body h3{font:26px/1.05 var(--f-display);margin:0 0 4px;letter-spacing:.02em}
+.card-body .yr{color:var(--muted);font:12px var(--f-script)}
+.card-body p{font-size:14px;color:var(--muted);margin:8px 0 10px}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{font:600 11px var(--f-body);padding:3px 8px;border-radius:4px;background:color-mix(in srgb,var(--accent) 18%,transparent);color:var(--accent)}
+[dir="rtl"] .chip{font-family:var(--f-ar)}
+
+/* parcours */
+.timeline{list-style:none;margin:0;padding:0;border-left:2px solid var(--line);max-width:720px}
+[dir="rtl"] .timeline{border-left:0;border-right:2px solid var(--line)}
+.timeline li{position:relative;padding:0 0 28px 28px}
+[dir="rtl"] .timeline li{padding:0 28px 28px 0}
+.timeline li::before{content:"";position:absolute;left:-8px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+[dir="rtl"] .timeline li::before{left:auto;right:-8px}
+.timeline li.now::before{background:var(--accent)}
+.timeline small{color:var(--accent);font:700 12px var(--f-script);letter-spacing:.08em}
+.timeline h3{margin:2px 0 2px;font-size:18px}
+.timeline p{margin:0;color:var(--muted);font-size:15px}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.skill{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px}
+.skill h3{margin:0 0 4px;font-size:16px}
+.skill p{margin:0;color:var(--muted);font-size:14px}
+
+/* contact */
+.contact{text-align:center}
+.contact h2{font:clamp(48px,9vw,96px)/.95 var(--f-display);margin:0 0 12px}
+.contact p{color:var(--muted);margin:0 auto 28px;max-width:520px}
+.contact .btns{justify-content:center}
+footer{padding:28px 0 40px;text-align:center;color:var(--muted);font:12px var(--f-script);border-top:1px solid var(--line)}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:200;background:#000e;display:none;align-items:center;justify-content:center;padding:16px}
+.lb.open{display:flex}
+.lb-inner{position:relative;max-width:min(92vw,520px);width:100%}
+.lb video{width:100%;max-height:82vh;background:#000;border-radius:8px;margin:0 auto}
+.lb-cap{color:#ddd;margin-top:10px;text-align:center;font-size:14px}
+.lb-cap b{font:24px var(--f-display);letter-spacing:.03em;color:#fff;display:block}
+.lb-close{position:absolute;top:-44px;right:0;background:none;border:1px solid #fff5;color:#fff;width:36px;height:36px;border-radius:50%;font-size:20px;cursor:pointer}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top">TAHA<span>.</span>Z</a>
+    <nav>
+      <a href="#about" data-i="nav_about">À propos</a>
+      <a href="#films" data-i="nav_films">Filmographie</a>
+      <a href="#parcours" data-i="nav_path">Parcours</a>
+      <a href="#contact" data-i="nav_contact">Contact</a>
+    </nav>
+    <div class="tools">
+      <button data-lang="fr" aria-pressed="true">FR</button>
+      <button data-lang="en" aria-pressed="false">EN</button>
+      <button data-lang="ar" aria-pressed="false">ع</button>
+      <button id="theme" aria-label="Thème clair / sombre">◐</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <p class="slug" data-i="hero_slug">FADE IN : EXT. ORAN — JOUR</p>
+        <h1>Taha<br><em>Zinai</em></h1>
+        <p class="roles" data-i="hero_roles" data-html><b>Scénariste</b> · <b>Production</b> · <b>Acteur</b></p>
+        <p class="hook" data-i="hero_hook">« Raconter Oran, une image à la fois. »</p>
+        <div class="btns">
+          <a class="btn primary" href="#films" data-i="hero_cta1">▶ Voir mes films</a>
+          <a class="btn" href="#contact" data-i="hero_cta2">Me contacter</a>
+        </div>
+      </div>
+      <div class="portrait">
+        <img src="media/avatar.jpg" alt="Portrait de Taha Zinai" width="600" height="750">
+        <span class="tag" data-i="hero_tag">ÉTUDIANT CINÉMA · ORAN 1</span>
+      </div>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="sec-head reveal"><div><p class="slug" data-i="about_slug">SCÈNE 1 — À PROPOS</p><h2 data-i="about_title">Qui je suis</h2></div></div>
+      <div class="about reveal">
+        <div>
+          <p data-i="about_p1">Né à Oran en 2002, je suis un raconteur d'histoires. J'étudie le cinéma en Licence à la Faculté des Arts de l'Université Oran 1 (كلية الفنون – جامعة وهران 1).</p>
+          <p data-i="about_p2">J'écris des idées, je les organise et je les produis, et je passe aussi devant la caméra. Publicités, courts formats, contenus pour des marques locales : j'aime les histoires simples, drôles et vraies, ancrées dans ma ville.</p>
+          <p class="note" data-i="about_note">Avant le cinéma, j'ai été pâtissier (CAP Pâtisserie, Hôtel Le Méridien Oran). J'en garde la rigueur, la précision et l'esprit d'équipe, que j'apporte aujourd'hui sur chaque tournage.</p>
+        </div>
+        <div class="facts">
+          <div class="fact"><small data-i="f_base">Basé à</small><strong>Oran, Algérie</strong></div>
+          <div class="fact"><small data-i="f_study">Études</small><strong data-i="f_study_v">Licence Cinéma — Oran 1</strong></div>
+          <div class="fact"><small data-i="f_lang">Langues</small><strong data-i="f_lang_v">Arabe · Français · Anglais</strong></div>
+          <div class="fact"><small data-i="f_roles">Rôles</small><strong data-i="f_roles_v">Écriture · Production · Jeu</strong></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="films">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div><p class="slug" data-i="films_slug">SCÈNE 2 — FILMOGRAPHIE</p><h2 data-i="films_title">Projets</h2></div>
+        <div class="filters" role="group" aria-label="Filtrer">
+          <button data-f="all" aria-pressed="true" data-i="flt_all">Tous</button>
+          <button data-f="write" aria-pressed="false" data-i="flt_write">Écriture</button>
+          <button data-f="prod" aria-pressed="false" data-i="flt_prod">Production</button>
+          <button data-f="act" aria-pressed="false" data-i="flt_act">Jeu</button>
+        </div>
+      </div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <section id="parcours">
+    <div class="wrap">
+      <div class="sec-head reveal"><div><p class="slug" data-i="path_slug">SCÈNE 3 — PARCOURS</p><h2 data-i="path_title">Parcours</h2></div></div>
+      <ol class="timeline reveal">
+        <li class="now"><small data-i="t1_d">AUJOURD'HUI</small><h3 data-i="t1_h">Licence Cinéma</h3><p data-i="t1_p">Faculté des Arts — Université Oran 1</p></li>
+        <li><small>2026</small><h3 data-i="t2_h">Publicités & courts formats</h3><p data-i="t2_p">Mugi Burger, Gulistan… écriture, production, tournage, montage et jeu.</p></li>
+        <li><small>2022 — 2023</small><h3 data-i="t3_h">CAP Pâtisserie</h3><p data-i="t3_p">Hôtel Le Méridien, Oran</p></li>
+        <li><small>2020</small><h3 data-i="t4_h">Baccalauréat — Sciences expérimentales</h3><p data-i="t4_p">Lycée Jil Bladi, Oran</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <div class="sec-head reveal"><div><p class="slug" data-i="sk_slug">SCÈNE 4 — COMPÉTENCES</p><h2 data-i="sk_title">Ce que j'apporte</h2></div></div>
+      <div class="skills reveal">
+        <div class="skill"><h3 data-i="s1_h">Écriture</h3><p data-i="s1_p">Idées, concepts publicitaires, scénarios courts.</p></div>
+        <div class="skill"><h3 data-i="s2_h">Production</h3><p data-i="s2_p">Organisation du tournage, lieux, équipe, planning.</p></div>
+        <div class="skill"><h3 data-i="s3_h">Jeu d'acteur</h3><p data-i="s3_p">Présence naturelle face caméra, humour, énergie.</p></div>
+        <div class="skill"><h3 data-i="s4_h">Tournage & montage</h3><p data-i="s4_p">Filmer et monter des contenus courts pour les marques.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap reveal">
+      <p class="slug" data-i="c_slug">FADE OUT.</p>
+      <h2 data-i="c_title">Travaillons ensemble</h2>
+      <p data-i="c_p">Une idée de film, une pub, un rôle ? Écrivez-moi.</p>
+      <div class="btns">
+        <a class="btn primary" href="https://wa.me/213554244856" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn" href="mailto:tahazinai000@gmail.com">tahazinai000@gmail.com</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>© <span id="yr"></span> Taha Adnane Zinai — Oran</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Vidéo">
+  <div class="lb-inner">
+    <button class="lb-close" id="lbClose" aria-label="Fermer">×</button>
+    <video id="lbVideo" controls playsinline preload="none"></video>
+    <div class="lb-cap" id="lbCap"></div>
+  </div>
+</div>
+
+<script>
+/* ===== Add a project: copy one object below. roles: write | prod | act ===== */
+const projects = [
+  { id:"court", year:"2026", roles:["act"], video:"media/court.mp4", cover:"media/cover-court.jpg",
+    title:{fr:"Pub narrative — Golden Hour", en:"Story Ad — Golden Hour", ar:"إعلان قصصي — Golden Hour"},
+    logline:{fr:"Une pub qui raconte une histoire : entre amis au coucher du soleil, puis une faim qui ne pardonne pas. Étalonnée, rythmée, tout en énergie.",
+             en:"An ad that tells a story: friends at sunset, then a hunger that won't wait. Colour-graded and full of energy.",
+             ar:"إعلان يحكي قصة: أصدقاء عند الغروب، ثم جوع لا يرحم. مليء بالطاقة والإيقاع."} },
+  { id:"mugi-nuit", year:"2026", roles:["write","prod","act"], video:"media/mugi-nuit.mp4", cover:"media/cover-mugi-nuit.jpg",
+    title:{fr:"Mugi Burger — Livraison de nuit", en:"Mugi Burger — Night Delivery", ar:"Mugi Burger — توصيل ليلي"},
+    logline:{fr:"Une virée nocturne dans Oran, le coffre plein de sacs Mugi. Écrit, produit, tourné et joué par Taha.",
+             en:"A night ride through Oran with a trunk full of Mugi bags. Written, produced, shot and acted by Taha.",
+             ar:"جولة ليلية في وهران وصندوق السيارة مليء بأكياس Mugi. كتابة وإنتاج وتصوير وتمثيل طه."} },
+  { id:"mugi-street", year:"2026", roles:["write","act"], video:"media/mugi-street.mp4", cover:"media/cover-mugi-street.jpg",
+    title:{fr:"Mugi Burger — Spot publicitaire", en:"Mugi Burger — Commercial", ar:"Mugi Burger — إعلان"},
+    logline:{fr:"De la rue jusqu'au comptoir, burger géant à la main. Une pub énergique dont l'idée vient de Taha.",
+             en:"From the street to the counter, giant burger in hand. An energetic ad based on Taha's idea.",
+             ar:"من الشارع إلى المطعم، وبرغر عملاق في اليد. إعلان مليء بالحيوية من فكرة طه."} },
+  { id:"gulistan", year:"2026", roles:["prod"], video:"media/gulistan.mp4", cover:"media/cover-gulistan.jpg",
+    title:{fr:"Gulistan — Café & pâtisserie", en:"Gulistan — Café & Pastry", ar:"Gulistan — مقهى وحلويات"},
+    logline:{fr:"Terrasse, tartes et cheesecake : une vidéo d'ambiance pour le café Gulistan, filmée et montée par Taha.",
+             en:"Terrace, tarts and cheesecake: a mood video for Gulistan café, shot and edited by Taha.",
+             ar:"تراس وتارت وتشيز كيك: فيديو أجواء لمقهى Gulistan، تصوير ومونتاج طه."} },
+  { id:"coulisses", year:"2026", roles:["act","prod"], video:"media/coulisses.mp4", cover:"media/cover-coulisses.jpg",
+    title:{fr:"Coulisses — Golden Hour", en:"Behind the scenes — Golden Hour", ar:"كواليس — Golden Hour"},
+    logline:{fr:"Sur le plateau de la pub narrative : la scène du burger, caméra au plus près.",
+             en:"On the set of the story ad: the burger scene, camera up close.",
+             ar:"في كواليس الإعلان القصصي: مشهد البرغر والكاميرا عن قرب."} }
+];
+
+const roleLabel = {
+  write:{fr:"Écriture",en:"Writing",ar:"كتابة"},
+  prod:{fr:"Production",en:"Production",ar:"إنتاج"},
+  act:{fr:"Acteur",en:"Actor",ar:"تمثيل"}
+};
+
+const T = {
+  fr:{},
+  en:{nav_about:"About",nav_films:"Films",nav_path:"Journey",nav_contact:"Contact",
+    hero_slug:"FADE IN: EXT. ORAN — DAY",hero_roles:"<b>Screenwriter</b> · <b>Production</b> · <b>Actor</b>",
+    hero_hook:"“Telling Oran's stories, one frame at a time.”",hero_cta1:"▶ Watch my films",hero_cta2:"Get in touch",hero_tag:"FILM STUDENT · ORAN 1",
+    about_slug:"SCENE 1 — ABOUT",about_title:"Who I am",
+    about_p1:"Born in Oran in 2002, I'm a storyteller. I'm studying for a Bachelor's in Cinema at the Faculty of Arts, University of Oran 1.",
+    about_p2:"I come up with ideas, organise and produce them, and I also step in front of the camera. Ads, short formats, content for local brands: I love simple, funny, honest stories rooted in my city.",
+    about_note:"Before cinema I was a pastry chef (CAP Pâtisserie, Hôtel Le Méridien Oran). I kept the discipline, precision and team spirit, and bring them to every shoot.",
+    f_base:"Based in",f_study:"Studies",f_study_v:"BA Cinema — Oran 1",f_lang:"Languages",f_lang_v:"Arabic · French · English",f_roles:"Roles",f_roles_v:"Writing · Production · Acting",
+    films_slug:"SCENE 2 — FILMOGRAPHY",films_title:"Projects",flt_all:"All",flt_write:"Writing",flt_prod:"Production",flt_act:"Acting",
+    path_slug:"SCENE 3 — JOURNEY",path_title:"Journey",t1_d:"NOW",t1_h:"BA in Cinema",t1_p:"Faculty of Arts — University of Oran 1",
+    t2_h:"Ads & short formats",t2_p:"Mugi Burger, Gulistan… writing, production, shooting, editing and acting.",t3_h:"CAP Pastry diploma",t3_p:"Hôtel Le Méridien, Oran",t4_h:"Baccalaureate — Experimental Sciences",t4_p:"Lycée Jil Bladi, Oran",
+    sk_slug:"SCENE 4 — SKILLS",sk_title:"What I bring",s1_h:"Writing",s1_p:"Ideas, ad concepts, short scripts.",s2_h:"Production",s2_p:"Shoot organisation, locations, crew, scheduling.",
+    s3_h:"Acting",s3_p:"Natural on-camera presence, humour, energy.",s4_h:"Shooting & editing",s4_p:"Filming and editing short content for brands.",
+    c_slug:"FADE OUT.",c_title:"Let's work together",c_p:"A film idea, an ad, a role? Write to me."},
+  ar:{nav_about:"من أنا",nav_films:"الأعمال",nav_path:"المسار",nav_contact:"تواصل",
+    hero_slug:"مشهد خارجي — وهران — نهار",hero_roles:"<b>كاتب سيناريو</b> · <b>إنتاج</b> · <b>ممثل</b>",
+    hero_hook:"«أحكي وهران، لقطة بعد لقطة.»",hero_cta1:"▶ شاهد أعمالي",hero_cta2:"تواصل معي",hero_tag:"طالب سينما · وهران 1",
+    about_slug:"المشهد 1 — من أنا",about_title:"من أنا",
+    about_p1:"وُلدت في وهران سنة 2002، وأحب رواية القصص. أدرس ليسانس سينما في كلية الفنون – جامعة وهران 1.",
+    about_p2:"أكتب الأفكار، أنظمها وأنتجها، وأقف أيضاً أمام الكاميرا. إعلانات، فيديوهات قصيرة، ومحتوى للعلامات المحلية: أحب القصص البسيطة والمضحكة والصادقة من مدينتي.",
+    about_note:"قبل السينما كنت حلوانياً (شهادة CAP حلويات، فندق لو ميريديان وهران). احتفظت منها بالانضباط والدقة وروح الفريق، وأحملها اليوم إلى كل تصوير.",
+    f_base:"المدينة",f_study:"الدراسة",f_study_v:"ليسانس سينما — وهران 1",f_lang:"اللغات",f_lang_v:"العربية · الفرنسية · الإنجليزية",f_roles:"الأدوار",f_roles_v:"كتابة · إنتاج · تمثيل",
+    films_slug:"المشهد 2 — الأعمال",films_title:"المشاريع",flt_all:"الكل",flt_write:"كتابة",flt_prod:"إنتاج",flt_act:"تمثيل",
+    path_slug:"المشهد 3 — المسار",path_title:"المسار",t1_d:"حالياً",t1_h:"ليسانس سينما",t1_p:"كلية الفنون — جامعة وهران 1",
+    t2_h:"إعلانات وفيديوهات قصيرة",t2_p:"Mugi Burger و Gulistan… كتابة وإنتاج وتصوير ومونتاج وتمثيل.",t3_h:"شهادة CAP حلويات",t3_p:"فندق لو ميريديان، وهران",t4_h:"بكالوريا — علوم تجريبية",t4_p:"ثانوية جيل بلادي، وهران",
+    sk_slug:"المشهد 4 — المهارات",sk_title:"ما أقدمه",s1_h:"الكتابة",s1_p:"أفكار، مفاهيم إعلانية، سيناريوهات قصيرة.",s2_h:"الإنتاج",s2_p:"تنظيم التصوير، المواقع، الفريق، الجدولة.",
+    s3_h:"التمثيل",s3_p:"حضور طبيعي أمام الكاميرا، فكاهة وطاقة.",s4_h:"التصوير والمونتاج",s4_p:"تصوير ومونتاج محتوى قصير للعلامات.",
+    c_slug:"تلاشي.",c_title:"لنعمل معاً",c_p:"فكرة فيلم، إعلان، دور؟ راسلني."}
+};
+
+let lang = "fr", filter = "all";
+const grid = document.getElementById("grid");
+const pad = n => String(n).padStart(2,"0");
+
+function render(){
+  grid.innerHTML = "";
+  projects.forEach((p,i) => {
+    if(filter !== "all" && !p.roles.includes(filter)) return;
+    const b = document.createElement("button");
+    b.className = "card reveal in";
+    b.innerHTML = `<div class="thumb"><img loading="lazy" src="${p.cover}" alt=""><span class="slate">SC.${pad(i+1)} · ${p.year}</span><span class="play"></span></div>
+      <div class="card-body"><h3>${p.title[lang]}</h3><span class="yr">${p.year}</span><p>${p.logline[lang]}</p>
+      <div class="chips">${p.roles.map(r=>`<span class="chip">${roleLabel[r][lang]}</span>`).join("")}</div></div>`;
+    b.addEventListener("click", () => openLb(p));
+    grid.appendChild(b);
+  });
+}
+
+// i18n: capture French defaults from the HTML
+document.querySelectorAll("[data-i]").forEach(el => { T.fr[el.dataset.i] = el.hasAttribute("data-html") ? el.innerHTML : el.textContent; });
+function setLang(l){
+  lang = l;
+  document.documentElement.lang = l;
+  document.documentElement.dir = l === "ar" ? "rtl" : "ltr";
+  document.querySelectorAll("[data-i]").forEach(el => {
+    const v = (T[l] && T[l][el.dataset.i]) || T.fr[el.dataset.i];
+    if(el.hasAttribute("data-html")) el.innerHTML = v; else el.textContent = v;
+  });
+  document.querySelectorAll("[data-lang]").forEach(b => b.setAttribute("aria-pressed", b.dataset.lang === l));
+  render();
+  try{ localStorage.setItem("taha-lang", l); }catch(e){}
+}
+document.querySelectorAll("[data-lang]").forEach(b => b.addEventListener("click", () => setLang(b.dataset.lang)));
+
+document.querySelectorAll("[data-f]").forEach(b => b.addEventListener("click", () => {
+  filter = b.dataset.f;
+  document.querySelectorAll("[data-f]").forEach(x => x.setAttribute("aria-pressed", x === b));
+  render();
+}));
+
+// theme
+const root = document.documentElement;
+document.getElementById("theme").addEventListener("click", () => {
+  const t = root.dataset.theme === "light" ? "dark" : "light";
+  root.dataset.theme = t;
+  try{ localStorage.setItem("taha-theme", t); }catch(e){}
+});
+
+// lightbox
+const lb = document.getElementById("lb"), v = document.getElementById("lbVideo"), cap = document.getElementById("lbCap");
+function openLb(p){
+  v.src = p.video; v.poster = p.cover;
+  cap.innerHTML = `<b>${p.title[lang]}</b>${p.roles.map(r=>roleLabel[r][lang]).join(" · ")} — ${p.year}`;
+  lb.classList.add("open"); document.body.style.overflow = "hidden";
+  v.play().catch(()=>{});
+  document.getElementById("lbClose").focus();
+}
+function closeLb(){ lb.classList.remove("open"); v.pause(); v.removeAttribute("src"); v.load(); document.body.style.overflow = ""; }
+document.getElementById("lbClose").addEventListener("click", closeLb);
+lb.addEventListener("click", e => { if(e.target === lb) closeLb(); });
+document.addEventListener("keydown", e => { if(e.key === "Escape" && lb.classList.contains("open")) closeLb(); });
+
+// reveal on scroll
+const io = "IntersectionObserver" in window ? new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } }), {threshold:.12}) : null;
+document.querySelectorAll(".reveal").forEach(el => io ? io.observe(el) : el.classList.add("in"));
+
+document.getElementById("yr").textContent = new Date().getFullYear();
+let saved = null, savedTheme = null;
+try{ saved = localStorage.getItem("taha-lang"); savedTheme = localStorage.getItem("taha-theme"); }catch(e){}
+if(savedTheme) root.dataset.theme = savedTheme;
+setLang(saved && T[saved] ? saved : "fr");
+</script>
+</body>
+</html>
